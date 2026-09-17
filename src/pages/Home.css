@@ -1,0 +1,146 @@
+.home-hero {
+  max-width: 760px;
+}
+
+.home-section {
+  margin-bottom: 8px;
+}
+
+.home-section-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 22px;
+}
+
+.home-section-head h2 {
+  font-family: var(--font-display);
+  font-size: 22px;
+  margin: 0;
+}
+
+.home-section-head a {
+  font-size: 14px;
+  text-decoration: none;
+  color: var(--ink-soft);
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: 1px;
+}
+
+.home-section-head a:hover {
+  color: var(--rust);
+  border-color: var(--rust);
+}
+
+/* Interviews */
+
+.home-interview-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+}
+
+.home-interview-card {
+  background: var(--paper-raised);
+  border: 1px solid var(--rule);
+  padding: 24px;
+}
+
+.home-interview-card h3 {
+  font-family: var(--font-display);
+  font-size: 19px;
+  margin: 0 0 4px;
+}
+
+.home-interview-role {
+  font-size: 13px;
+  color: var(--ink-soft);
+  margin: 0 0 14px;
+}
+
+.home-interview-excerpt {
+  font-size: 15px;
+  line-height: 1.6;
+  font-style: italic;
+  margin: 0;
+  color: var(--ink);
+}
+
+/* Graveyard preview */
+
+.home-grave-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid var(--rule);
+}
+
+.home-grave-list li {
+  display: grid;
+  grid-template-columns: 1fr 80px 1fr;
+  gap: 16px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--rule);
+  align-items: baseline;
+}
+
+.home-grave-name {
+  font-family: var(--font-display);
+  font-size: 16px;
+}
+
+.home-grave-year {
+  color: var(--rust);
+  font-size: 14px;
+}
+
+.home-grave-cause {
+  color: var(--ink-soft);
+  font-size: 14px;
+  text-align: right;
+}
+
+/* Blog preview */
+
+.home-post-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid var(--rule);
+}
+
+.home-post-list li {
+  display: flex;
+  justify-content: space-between;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--rule);
+  font-size: 15px;
+}
+
+.home-post-list time {
+  color: var(--ink-soft);
+  font-size: 13px;
+}
+
+@media (max-width: 700px) {
+  .home-interview-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .home-grave-list li {
+    grid-template-columns: 1fr auto;
+    grid-template-areas: "name year" "cause cause";
+  }
+
+  .home-grave-name {
+    grid-area: name;
+  }
+  .home-grave-year {
+    grid-area: year;
+  }
+  .home-grave-cause {
+    grid-area: cause;
+    text-align: left;
+    margin-top: 4px;
+  }
+}

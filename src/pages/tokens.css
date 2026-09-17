@@ -1,0 +1,74 @@
+/* ================================
+   Loryfiar — Design Tokens
+================================ */
+
+:root {
+  --paper: #f7f5f1;
+  --paper-raised: #fbfaf7;
+  --ink: #1c1b19;
+  --ink-soft: #55524c;
+  --rule: #c9c2b4;
+  --rust: #8b3a2f;
+  --moss: #3d5a45;
+
+  --font-display: "Roboto Slab", Georgia, serif;
+  --font-body: "Inter", Arial, Helvetica, sans-serif;
+}
+
+@font-face {
+  font-family: "Roboto Slab";
+  src: local("Roboto Slab");
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: clip;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+}
+
+.page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 56px 20px 100px;
+}
+
+.page-kicker {
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: var(--ink-soft);
+  margin: 0 0 6px;
+}
+
+.page-title {
+  font-family: var(--font-display);
+  font-size: clamp(34px, 5vw, 52px);
+  font-weight: 700;
+  margin: 0 0 14px;
+  line-height: 1.1;
+}
+
+.page-dek {
+  font-size: 17px;
+  line-height: 1.6;
+  color: var(--ink-soft);
+  max-width: 620px;
+  margin: 0 0 40px;
+}
+
+.rule {
+  border: none;
+  border-top: 1px solid var(--rule);
+  margin: 0 0 40px;
+}
+
+a {
+  color: inherit;
+}
